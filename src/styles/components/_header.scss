@@ -1,0 +1,97 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    @include respond-to(mobile-ex) {
+        flex-direction: column;
+    }
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+
+    &__logo {
+        width: 240px;
+        height: 60px;
+        background-color: #ccc;
+        @include respond-to(desktop) {
+            width: 320px;
+            height: 90px;
+            background-color: #aaa;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        @include respond-to(mobile-ex) {
+            margin: 20px 0;
+        }
+    }
+
+    &__hamburger {
+        border: 0;
+        cursor: pointer;
+        background-image: url('/img/hamburger.png');
+        width: 53px;
+        height: 53px;
+        @include respond-to(desktop) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        &-item {
+            background-color: #888;
+            padding: 5px;
+            margin: 10px 0 0 0;
+        }        
+        flex-direction: column;
+        align-items: center;
+        @include respond-to(desktop) {
+            flex-direction: row;
+            display: flex;
+            &-item {
+                margin: 0 30px;
+            }
+        }
+
+        &-link {
+            font-size: 12px;
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        display: none;
+        &--visible {
+            display: flex;
+        }
+    }
+
+
+    &__social {
+        display: flex;
+        &-fb {
+            @include sprite($fb);
+            margin: 0 20px 0 0;
+        }
+        &-yt {
+            @include sprite($yt);
+        }
+    }
+
+
+    // debug, zostawiam
+    background-color: #ddd;
+    & > div, nav {
+        background-color: #bbb;
+    }
+}
+
+.icon {
+  display: inline-block;
+}

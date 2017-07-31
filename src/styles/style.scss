@@ -1,0 +1,24 @@
+// Variables first, to override default package options
+@import 'modules/variables';
+
+// Vendor: package manager (Bower/npm)
+@import 'reset-css';
+@import 'breakpoint-sass';
+@import 'sass-starter';
+
+// Vendor: inline
+// Example (update path to actual):
+// @import '../../vendor/styles/some-lib/lib';
+
+// Config files
+@import 'modules/mixins';
+@import 'modules/colors';
+@import 'modules/fonts';
+
+// Sprites (directory will be automatically created)
+@import 'sprites/**/*';
+
+
+// Components
+@import 'components/**/*';
+

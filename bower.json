@@ -1,0 +1,12 @@
+{
+  "name": "fs-bundle-default",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "reset-css": "2.*.*",
+    "breakpoint-sass": "2.*.*",
+    "sass-core": "~0.2.0",
+
+    "jquery": "3.*.*"
+  }
+}
